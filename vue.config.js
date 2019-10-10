@@ -20,5 +20,20 @@ module.exports = {
       .set('@', resolve('src'))
       .set('assets', resolve('src/assets'))
       .set('components', resolve('src/components'))
+  },
+  devServer: {
+    useLocalIp: true,
+    port: 3020,
+    host: '0.0.0.0',
+    open: 'true',
+    openPage: 'index.html',
+    disableHostCheck: true,
+    proxy: {
+      '/fudan_retiree': {
+        target: 'http://parking.benefitunion.cn',
+        changeOrigin: true,
+        ws: false
+      }
+    }
   }
 };

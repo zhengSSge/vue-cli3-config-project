@@ -22,3 +22,8 @@ module.exports = {
   ],
   plugins
 };
+
+
+// npm install @babel/polyfill -s
+
+// npm install babel-plugin-transform-remove-console -s
